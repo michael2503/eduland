@@ -1,0 +1,109 @@
+.menubar {
+  cursor: pointer;
+  display: none;
+  margin-left: 30px;
+  div {
+      border-bottom: 3px solid #000;
+      margin-bottom: 6px;
+      width: 25px;
+      transition: .3s ease;
+  }
+  @media(max-width: 1023px) {
+      display: block;
+  }
+}
+
+.closeBar{
+  div {
+    border-bottom: 3px solid #000;
+    margin-bottom: 6px;
+    width: 25px;
+    transition: .3s ease;
+    transform: scaleY(1);
+  }
+}
+.toggleMenuClose{
+  .first {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .second {
+      transform: scaleX(0);
+  }
+  .third {
+      transform: translateY(-9px) rotate(-45deg);
+  }
+}
+#close{
+  display: none;
+  cursor: pointer;
+}
+.toggleMenu.dropMenu {
+  .first {
+      transform: translateY(9px) rotate(45deg);
+  }
+  .second {
+      transform: scaleX(0);
+  }
+  .third {
+      transform: translateY(-9px) rotate(-45deg);
+  }
+}
+.dropMenu {
+  transform: scaleY(1);
+}
+.dropMenuClose {
+  .first {
+    transform: translateY(1px) rotate(180deg);
+  }
+  .second {
+      transform: scaleX(1);
+  }
+  .third {
+      transform: translateY(1px) rotate(180deg);
+  }
+}
+
+
+.linkList {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 3000;
+  top: 0px;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+
+.linkList a:hover {
+  color: #f1f1f1;
+}
+a{
+  cursor: pointer;
+}
+
+
+.list-group-item{
+	background-color: #fff;
+	border-radius: 0px !important;
+  padding: 20px 15px 20px 15px !important;
+  color: #121217;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+}
+.list-group-item:hover{
+    color: #fff;
+    background: #121217;
+}
+.list-group-item.active{
+    background-color: purple;
+    border: none;
+}

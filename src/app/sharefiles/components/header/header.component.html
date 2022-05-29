@@ -1,0 +1,100 @@
+<header class="header" data-header [class.stick]="stick">
+  <div class="container">
+
+    <div class="overlay" data-overlay></div>
+
+    <a href="#" class="logo" id="mainLogo">
+      <img src="./assets/images/logo.svg" alt="Eduland logo">
+    </a>
+
+    <button class="menu-open-btn" data-menu-open-btn>
+      <!-- <ion-icon name="menu-outline"></ion-icon> -->
+    </button>
+
+    <nav class="navbar" data-navbar>
+
+      <!-- <button class="menu-close-btn" data-menu-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button> -->
+
+      <!-- <a href="/" class="logo">
+        <img src="./assets/images/logo.svg" alt="Eduland logo">
+      </a> -->
+
+      <ul class="navbar-list">
+        <li>
+          <a routerLink="/" class="navbar-link">Home</a>
+        </li>
+
+        <li>
+          <a routerLink="/about" class="navbar-link">About</a>
+        </li>
+
+        <li>
+          <a routerLink="/service" class="navbar-link">Service</a>
+        </li>
+
+        <li>
+          <a routerLink="/blog" class="navbar-link">Blog</a>
+        </li>
+
+        <li>
+          <a routerLink="/contact" class="navbar-link">Contact</a>
+        </li>
+
+      </ul>
+
+      <button class="btn btn-secondary">Get Started</button>
+
+    </nav>
+
+    <div id="open" class="menubar toggleMenu" [class.dropMenu]="dropMenu" (click)="getit()" (click)="dropMenu = !dropMenu">
+      <div class="first"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+    </div>
+
+    <div id="close" class="closeBar toggleMenuClose" [class.dropMenuClose]="dropMenuClose" (click)="closeIt()" (click)="dropMenuClose = !dropMenuClose">
+      <div class="first"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+    </div>
+
+  </div>
+
+
+  <nav id="drawer">
+    <div id="mySidenav" class="sidenav">
+
+        <div id="menu-wrapper"  class="linkList">
+
+            <div class="navList">
+
+              <div style="height: 70px;">
+                <a routerLinkActive="isActive" routerLink="/" style="padding: 15px 10px;">
+                  <img src="./assets/images/logo.svg" alt="Eduland logo">
+                </a>
+              </div>
+
+              <div style="height: calc(100vh - 70px); overflow-y: auto; padding-top: 20px;">
+                <a routerLinkActive="isActive" routerLink="/" class="list-group-item list-group-item-action"><i class="menu-list-icon fa fa-dashboard"></i> Home</a>
+
+
+                <a routerLink="/about" class="list-group-item list-group-item-action logout"><i class="menu-list-icon fa fa-users"></i> About</a>
+
+                <a routerLink="/service" class="list-group-item list-group-item-action logout"><i class="menu-list-icon fa fa-folder-open"></i> Service</a>
+
+                <a routerLink="/blog" class="list-group-item list-group-item-action logout"><i class="menu-list-icon fa fa-folder-open"></i> Blog</a>
+
+                <a routerLink="/contact" class="list-group-item list-group-item-action logout"><i class="menu-list-icon fa fa-folder-open"></i> Contact</a>
+
+                <a routerLink="/login" class="list-group-item list-group-item-action logout"><i class="menu-list-icon fa fa-folder-open"></i> Get Started</a>
+
+              </div>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+</header>
